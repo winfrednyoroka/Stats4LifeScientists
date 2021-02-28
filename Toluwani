@@ -1,0 +1,96 @@
+# Statistics-Examination
+## Question 1
+1. The 500 registered voters are a sample
+2. The percentage among all registered voters of the given party, of those that prefer a male candidate refers to a parameter
+3. The number 42% that correspond to the percentage of those that prefer a female candidate refer to a statistic
+4. The voters in the state that are registered to the given party are the population
+
+### Question 2b
+Steps involved in hypothesis testing
+1. Make null and alternate hypothesis statement
+2. Collect associated data
+3. Perform a statistical test
+4. Decide whether the null hypothesis is supported or refuted
+5. Present your findings.
+
+###Question 2a
+#import data from lbw.csv file to Global environment
+getwd()
+#set wd from 'session'
+Bodyweights <- read.csv("lbw.csv", header = TRUE)
+attach(Bodyweights)
+
+names(Bodyweights)
+summary(bwt)
+mean(bwt)
+median(bwt)
+
+
+#### Hypothesis Testing Practical
+summary(Bodyweights)
+table(smoke)
+
+#1. Proportions of total birth to mothers that were smokers: 74 smoking mothers all have recorded bwt
+Hence the proportion(p')=74/189
+#2. Proportion of total births of babies classified as low: 59/189
+table(low)
+#3. Contingency table of low birth weight vs smoke
+list(Bodyweights$low)
+low <- c(0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1)
+list(Bodyweights$smoke)
+smoke <- c(0 0 1 1 1 0 0 0 1 1 0 0 0 0 1 1 0 1 0 1 0 0 0 0 0 0 1 0 1 0 0 1 1 0 0 1 1 1 1
+ 1 1 0 0 0 1 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 0 1 0 0 1 0 0 1 1 1 0 1 0 0 1
+ 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0
+ 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 0 0 1 1 1 0 0 1 1 0 1 0 0 0 0 1 1 0 1
+ 1 1 0 1 1 0 0 0 1 1 0 0 1 0 1 1 1 0 0 1 1 1 1 0 0 0 1 1 1 0 1 0 1) 
+#indexing
+low[189]
+smoke[189]
+mydataframe <- data.frame(low,smoke)
+#4a. Answer:no
+table(low, smoke)
+#4b. Null hypothesis: Smoking is not a risk factorof low birth weight of babies
+#    Alternative Hypothesis: Smoking is a major determinant of the birth weight of babies
+#5a. Null Hypothesis: The Blood Pressure levels of Pregnant women have no underlying effect to the weight of babies
+Alternative Hypothesis: Pregnant women with normal blood pressure level birth children with normal birth weight
+#5b
+mydataframe2 <- data.frame(ht,bwt)
+
+
+
+
+
+
+                                       
+####Question 3
+#VARIABLES
+#Ages-Early ages
+#ages-New ages
+Ages-a <- c(32.2,37.5,41.7,53.8,50.2,48.2,46.3,65.0,44.8)
+
+result.mean <- mean(Ages)
+print(result.mean)
+
+result.median <- median(Ages)
+print(result.median)
+
+
+ages <- c(32.2,37.5,41.7,53.8,50.2,48.2,46.3,46.5,44.8)
+
+result.meanB <- mean(ages)
+print(result.meanB)
+
+result.medianB <- median(Ages)
+print(result.medianB)
+
+
+
+      
+      
+      
+      
+      
